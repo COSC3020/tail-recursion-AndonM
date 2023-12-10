@@ -12,6 +12,10 @@ implementation. What changes between iterations of the loop?
 
 ## Runtime Analysis
 
-Is the asymptotic complexity of tail-recursive Fibonacci different from the
-non-tail-recursive version? Why, or why not? Add your answer, including your
-reasoning, to this markdown file.
+There is not a difference in the asymptotic complexity of this algorithm and that which was
+implemented in fibonacci-invariants. In both cases, we are making one recursive call to 
+compute one additional fibonacci number. Sure, the tail-recursive method takes two more 
+parameters; however, there is no additional work involved given all of the computation
+for both of them is done before the recursive call. With this in mind, we conclude the 
+time-complexity to be $\theta (n)$ given that each call runs in linear time with respect
+to the number of fibonacci numbers to generate.
